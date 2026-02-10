@@ -1,0 +1,563 @@
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Linux Libertine", "Georgia", "Times", serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #202122;
+  background: #f6f6f6;
+}
+
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #0b0080;
+}
+
+/* Header */
+.wiki-header {
+  background: #fff;
+  border-bottom: 1px solid #a7d7f9;
+  padding: 0 1rem;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #202122;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Linux Libertine", "Georgia", serif;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-text strong {
+  font-size: 1.1rem;
+  font-family: "Linux Libertine", "Georgia", serif;
+}
+
+.logo-text span {
+  font-size: 0.7rem;
+  color: #54595d;
+  font-family: sans-serif;
+}
+
+.search-form {
+  display: flex;
+  max-width: 400px;
+  flex: 1;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px 0 0 2px;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  outline: none;
+}
+
+.search-form input:focus {
+  border-color: #3366cc;
+  box-shadow: inset 0 0 0 1px #3366cc;
+}
+
+.search-form button {
+  padding: 0.4rem 1rem;
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  cursor: pointer;
+  color: #202122;
+}
+
+.search-form button:hover {
+  background: #eaecf0;
+}
+
+/* Layout */
+.wiki-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+  background: #fff;
+  min-height: calc(100vh - 60px);
+  border-left: 1px solid #a7d7f9;
+  border-right: 1px solid #a7d7f9;
+}
+
+/* Sidebar */
+.wiki-sidebar {
+  width: 180px;
+  flex-shrink: 0;
+  background: #f6f6f6;
+  border-right: 1px solid #a7d7f9;
+  padding: 1rem 0;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+}
+
+.wiki-sidebar h3 {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #54595d;
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
+}
+
+.wiki-sidebar ul {
+  list-style: none;
+}
+
+.wiki-sidebar li a {
+  display: block;
+  padding: 0.25rem 0.8rem;
+  color: #0645ad;
+}
+
+.wiki-sidebar li a:hover {
+  background: #eaecf0;
+  text-decoration: none;
+}
+
+/* Main Content */
+.wiki-content {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  min-width: 0;
+}
+
+.page-title {
+  font-family: "Linux Libertine", "Georgia", serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #54595d;
+  font-family: sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Home Page */
+.featured-article {
+  margin-bottom: 2rem;
+}
+
+.featured-article h2 {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.featured-card {
+  background: #f8f9fa;
+  border: 1px solid #eaecf0;
+  padding: 1rem 1.2rem;
+  border-radius: 2px;
+}
+
+.featured-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.featured-card p {
+  font-size: 0.95rem;
+  color: #54595d;
+  margin-bottom: 0.5rem;
+}
+
+.read-more {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+}
+
+.all-articles h2 {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.article-card {
+  border: 1px solid #eaecf0;
+  padding: 0.8rem 1rem;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.article-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.article-card p {
+  font-size: 0.85rem;
+  color: #54595d;
+  margin-bottom: 0.5rem;
+}
+
+.article-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.category-tag {
+  font-family: sans-serif;
+  font-size: 0.7rem;
+  background: #eaecf0;
+  color: #54595d;
+  padding: 0.1rem 0.5rem;
+  border-radius: 2px;
+}
+
+/* Article Page */
+.article-meta {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.toc {
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 0.8rem 1.2rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.toc h2 {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+
+.toc ol {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.toc li {
+  margin: 0.15rem 0;
+}
+
+.toc .toc-sub {
+  margin-left: 1rem;
+  font-size: 0.85rem;
+}
+
+.article-body h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.15rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.article-body h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1.2rem 0 0.4rem;
+}
+
+.article-body p {
+  margin-bottom: 0.6rem;
+}
+
+.article-body ul {
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.article-body li {
+  margin-bottom: 0.2rem;
+}
+
+/* Search Page */
+.search-query {
+  font-family: sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #54595d;
+}
+
+.no-results {
+  font-family: sans-serif;
+  color: #54595d;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-result {
+  border-bottom: 1px solid #eaecf0;
+  padding-bottom: 1rem;
+}
+
+.search-result h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 0.2rem;
+}
+
+.search-result p {
+  font-size: 0.9rem;
+  color: #54595d;
+}
+
+/* Header actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 480px;
+}
+
+.theme-toggle {
+  padding: 0.4rem 0.8rem;
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-family: sans-serif;
+  cursor: pointer;
+  color: #202122;
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  background: #eaecf0;
+}
+
+/* Dark Mode */
+[data-theme="dark"] body {
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] a {
+  color: #6db3f2;
+}
+
+[data-theme="dark"] a:visited {
+  color: #9b8ec8;
+}
+
+[data-theme="dark"] .wiki-header {
+  background: #16213e;
+  border-bottom-color: #2a4a7f;
+}
+
+[data-theme="dark"] .logo {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .logo-icon {
+  border-color: #e0e0e0;
+}
+
+[data-theme="dark"] .logo-text span {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .search-form input {
+  background: #1a1a2e;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .search-form input:focus {
+  border-color: #6db3f2;
+  box-shadow: inset 0 0 0 1px #6db3f2;
+}
+
+[data-theme="dark"] .search-form button {
+  background: #2a2a4a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .search-form button:hover {
+  background: #3a3a5a;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: #2a2a4a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: #3a3a5a;
+}
+
+[data-theme="dark"] .wiki-body {
+  background: #1e1e36;
+  border-color: #2a4a7f;
+}
+
+[data-theme="dark"] .wiki-sidebar {
+  background: #16213e;
+  border-right-color: #2a4a7f;
+}
+
+[data-theme="dark"] .wiki-sidebar h3 {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .wiki-sidebar li a:hover {
+  background: #2a2a4a;
+}
+
+[data-theme="dark"] .page-title {
+  border-bottom-color: #444;
+}
+
+[data-theme="dark"] .subtitle {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .featured-card {
+  background: #16213e;
+  border-color: #2a4a7f;
+}
+
+[data-theme="dark"] .featured-card p {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .featured-article h2,
+[data-theme="dark"] .all-articles h2 {
+  border-bottom-color: #444;
+}
+
+[data-theme="dark"] .article-card {
+  background: #16213e;
+  border-color: #2a4a7f;
+}
+
+[data-theme="dark"] .article-card p {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .category-tag {
+  background: #2a2a4a;
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .toc {
+  background: #16213e;
+  border-color: #2a4a7f;
+}
+
+[data-theme="dark"] .article-body h2 {
+  border-bottom-color: #444;
+}
+
+[data-theme="dark"] .search-query,
+[data-theme="dark"] .no-results {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .search-result {
+  border-bottom-color: #333;
+}
+
+[data-theme="dark"] .search-result p {
+  color: #a0a0a0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wiki-sidebar {
+    display: none;
+  }
+
+  .wiki-content {
+    padding: 1rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-actions {
+    max-width: none;
+  }
+
+  .search-form {
+    max-width: none;
+  }
+}
